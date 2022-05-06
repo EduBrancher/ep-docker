@@ -1,0 +1,10 @@
+Os comandos de docker executados no terminal estao relacionados abaixo.
+Quando chamamos build, o Dockerfile tambem sera executado.
+
+Parte 1
+docker build .
+docker run --name container-teste -p 5400:80 63bb
+
+Parte 2
+docker image build . -t my-caddy-image:2.5.0-alpine
+docker container run --name container-teste -p 5400:80 -v ${PWD}/pages:/usr/src/pages -d my-caddy-image:2.5.0-alpine
